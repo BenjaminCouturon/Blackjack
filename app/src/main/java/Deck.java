@@ -18,7 +18,7 @@ public class Deck {
     }
 
     public Card getNextCard() {
-        Card card = cards.get(index);
+        Card card = cards.get(currentCard);
         int currentCard;
         currentCard++;  // 1 carte a été prise prendre la suivante la prochaine fois
         return card;
