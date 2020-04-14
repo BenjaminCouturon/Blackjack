@@ -1,4 +1,6 @@
-public class Player {
+package BlackJack;
+
+ class Player {
     String nom;
     int argent;
     int [] main = new int [5];
@@ -18,12 +20,12 @@ public class Player {
     public static int pointsMain(Player joueur){
         int somme = 0;
         for (int i = 0; i<5;i++){
-            somme += BlackJack.PaquetCartes.valeurCarte(joueur.main[i]);
+            somme += com.agendize.android.blackjack.game.Card.value(joueur.main[i]);
         }
         if(somme > 21){
             int nbAs = 0;
             for (int i = 0;i<5;i++){
-                if(BlackJack.PaquetCartes.valeurCarte(joueur.main[i])==11){
+                if(com.agendize.android.blackjack.game.Card.value(joueur.main[i])==11){
                     nbAs ++;
                 }
             }
@@ -36,7 +38,7 @@ public class Player {
 
     public static void afficherMain(Player joueur){
         for (int i = 0; i<5;i++){
-            BlackJack.PaquetCartes.carte(joueur.main[i]);
+            com.agendize.android.blackjack.game.Card.value(joueur.main[i]);
         }
     }
 

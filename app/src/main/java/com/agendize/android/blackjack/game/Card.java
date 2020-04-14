@@ -1,5 +1,7 @@
 package com.agendize.android.blackjack.game;
 
+import android.renderscript.Sampler;
+
 import com.agendize.android.blackjack.R;
 
 /**
@@ -17,6 +19,7 @@ public class Card {
     public Card(Rank rank, Suit suit) {
         this.rank = rank;
         this.suit = suit;
+        value() = this.value();
     }
 
     int value() {
